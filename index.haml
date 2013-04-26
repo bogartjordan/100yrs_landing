@@ -3,51 +3,77 @@
 /[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
 /[if IE 7] <html class="no-js lt-ie9 lt-ie8">
 /[if IE 8] <html class="no-js lt-ie9">
-/ [if gt IE 8]><!
-%html.no-js
-/ <![endif]
 
 %head
-  %title
+  %title A HUNDRED YEARS
   %meta{:charset => "utf-8"}/
   %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
   %meta{:content => "", :name => "description"}/
   %meta{:content => "width=device-width", :name => "viewport"}/
-  
+
   %link{:href => "css/bootstrap.css", :rel => "stylesheet"}/
   %link{:href => "css/bootstrap-responsive.css", :rel => "stylesheet"}/
-  %link{:href => "assets/css/webfonts.css", :rel => "stylesheet"}/
+  %link{:href => "css/webfonts.css", :rel => "stylesheet"}/
   %link{:href => "assets/css/100yrs.css", :rel => "stylesheet"}/
   %link{:href => "assets/css/100yrs-responsive.css", :rel => "stylesheet"}/
-  
-  %script{:src => "js/bootstrap.js"}
+
+  -#%script{:src => "js/bootstrap.js"}
   %script{:src => "js/modernizr-2.6.2-respond-1.1.0.min.js"}
     
 %body
   .container-fluid.no-padding.position-relative.overflow-hidden
     #breakpoints
-  
+
     #logo
       %img(src="img/logo-100yrs.png")
-      
-    #logo-bg
-      %img(src="img/logo-bg.png")
-      
-    #logo-shape
-      %img(src="img/shape-hexagon.png")
   
+    #logo-bg
+  
+    #logo-shape
+      %img(src="img/shape-hexagon-padded.png")
+
     .row-fluid.no-margin
-      .row-50.top-left
-      
-      .row-50.top-right.overflow-hidden
-        .text-content
-          .text
+      .row-50.top-left.position-relative
+        .shape-bg.left
+  
+      .row-50.top-right.position-relative.overflow-hidden
+        .shape-bg.right
+        
+        .text-top
+          .text-top-content
             A Hundred Years is a purpose-driven creative consultancy dedicated to amplifying the dreams of extraordinary organizations. We design products and experiences that inspire, engage and connect people to what matters most.
-          .text-title
-            May 23<sup>rd</sup>
-          .text
-            Join us as we kick off our new venture, May 23rd at 7pm, over here at our HQ in the Downtown LA Arts District.  The fiesta will feature brief remarks by xxxx as well as a performance by musician and activist, Meklit Hadero, not to mention cocktails and some tasty bites. RSVP HERE
+          .text-top-title
+            May 23<sup>RD</sup>
+          .text-top-content
+            Join us as we kick off our new venture, May 23rd at 7pm, over here at our HQ in the Downtown LA Arts District.  The fiesta will feature brief remarks by xxxx as well as a performance by musician and activist, Meklit Hadero, not to mention cocktails and some tasty bites.
+            %a.rsvp{:href => "#"} RSVP HERE
+            
+  .container-fluid
+    .container
+      .row-50.bottom-left
+        .text-bottom-left
+          .text-bottom-title
+            So, why the name change?
+            .underline
           
-          
+          .text-bottom-subtitle
+            After 11 years working at the intersection of business and purpose, we started a process of really honing in on who we are as a company and, surprisingly, this journey led us all the way to a new name — 
+            %span A Hundred Years
+            &#46;
+      
+      .row-50.bottom-right
+        .text-bottom-right
+          #logo-small
+        
+          .text-bottom-body
+            For us, it’s about taking the long view. Just beyond the average scope of a human life, we see A Hundred Years as a lens to further articulate what’s truly lasting and what really matters - for the businesses and organizations we work with, as well as for ourselves.
+            
+          .text-bottom-body
+            Only one century ago, world maps carved out entirely different territories, space travel was the stuff of fantasy, and objects of modern convenience were just being conceived. The past hundred years, however, have created a sea change for humanity. Today we live in a globally connected world with an unprecedented amount of information at our fingertips, yet the  challenges we face are equal to the greatness of our advancements.
+            
+          .text-bottom-body
+            Many of these issues are too complex to be solved within a fiscal quarter, a budget year, an election cycle, or even within a generation, but that’s where the long view comes into play. A Hundred Years aims to engage bold leaders and visionary organizations to tackle these challenges, head-on, unconvering new perspectives, disrupting assumptions and creating platforms, products and experiences that have the capacity to create powerfully meaningful impact.
+      
+      
           
     

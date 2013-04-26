@@ -2,6 +2,16 @@ body {
   padding: 0 !important;
 }
 
+a {
+  color: #fff;
+  text-decoration: underline;
+  
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
 #breakpoints {
   position: absolute;
   display: block;
@@ -10,6 +20,7 @@ body {
   width: 50px;
   height: 5px;
   background: white;
+  z-index: 200;
 }
 
 
@@ -20,10 +31,10 @@ body {
   position: relative;
 }
 .no-padding {
-  padding: 0;
+  padding: 0 0 0 0;
 }
 .no-margin {
-  margin: 0 auto;
+  margin: 0 0 0 0;
 }
 
 .row-50 {
@@ -52,34 +63,44 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
+  background: url(/img/logo-bg.png) center top no-repeat;
   z-index: 50;
-  
-  img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
-  }
 }
 
 #logo-shape {
+  display: none;
   position: absolute;
-  top: 117px;
+  top: 0;
   left: 0;
   width: 83%;
   margin: 0 0 0 8.5%;
   opacity: 0.25;
   z-index: 25;
   
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  transition: left 1.2s;
+  -moz-transition: left 1.2s;
+  -webkit-transition: left 1.2s;
+  -o-transition: left 1.2s;
+  
   img {
+    position: relative;
     display: block;
     width: 100%;
     max-width: 765px;
     margin: 0 auto;
+    
+    transition: left 1.2s;
+    -moz-transition: left 1.2s;
+    -webkit-transition: left 1.2s;
+    -o-transition: left 1.2s;
   }
 }
-
 
 
 .top-left {
@@ -95,7 +116,6 @@ body {
   -webkit-transition: width 1.2s;
   -o-transition: width 1.2s;
 }
-
 .top-right {
   background: url(/img/bg-right.jpg) left center no-repeat;
   -webkit-background-size: cover;
@@ -109,28 +129,55 @@ body {
   -webkit-transition: width 1.2s;
   -o-transition: width 1.2s;
 }
-
-.text-content {
-  position: relative;
-  margin-top: 280px;
-  z-index: 75;
+.shape-bg {
+  position: absolute;
+  width: 765px;
+  height: 612px;
+  background: url(/img/shape-hexagon-padded.png) top left no-repeat transparent;
+  opacity: 0.25;
+  z-index: 25;
+}
+.shape-bg.left {
+  top: 0;
+  right: -382px;
+}
+.shape-bg.right {
+  top: 0;
+  left: -382px;
 }
 
-.text {
+.text-top {
+  position: relative;
+  margin-top: 276px;
+  z-index: 200;
+}
+
+.text-top-content {
   clear: both;
   float: left;
   
   color: #fff;
   font-family: HouschkaAltPro-Light, "Helvetica", sans-serif;
   font-size: 18px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  line-height: 1.1;
   
   width: 50%;
-  width: 390px;
+  width: 340px;
   margin-left: 26px;
+  margin-bottom: 37px;
+  
+  a.rsvp {
+    font-size: 12px;
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
-.text-title {
+.text-top-title {
   clear: both;
   float: left;
   
@@ -140,11 +187,95 @@ body {
   letter-spacing: 2px;
   
   width: 40%;
-  min-width: 211px;
+  width: 211px;
   
   padding: 0 0 10px 0;
   margin-left: 26px;
+  margin-bottom: 16px;
   
   border-bottom: 10px solid #fff;
+  
+  sup {
+    font-size: 16px;
+  }
+}
+
+
+.bottom-left {
+}
+.bottom-right {
+}
+
+.text-bottom-left {
+  position: relative;
+  clear: both;
+  float: right;
+  margin-top: 104px;
+}
+
+.text-bottom-right {
+  position: relative;
+  clear: both;
+  float: left;
+  margin-top: 100px;
+}
+
+.text-bottom-body {
+  clear: both;
+  float: left;
+  
+  color: #000;
+  font-family: HouschkaAltPro-Medium, "Helvetica", sans-serif;
+  font-size: 22px;
+  line-height: 1.65;
+  
+  margin-left: 26px;
+  margin-bottom: 35px;
+}
+
+#logo-small {
+  position: absolute;
+  bottom: 16px;
+  right: 0;
+  width: 35px;
+  height: 34px;
+  background: url(/img/logo-100yrs-small.png) 0 0 no-repeat transparent;
+}
+
+.text-bottom-title {
+  color: #000;
+  font-family: HouschkaAltPro-bold, "Helvetica", sans-serif;
+  font-size: 108px;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 0.8;
+  margin-right: 26px;
+  
+  .underline {
+    clear: both;
+    display: block;
+    float: right;
+    width: 320px;
+    height: 20px;
+    margin-top: 12px;
+    margin-bottom: 38px;
+    background: #c75700;
+  }
+}
+
+.text-bottom-subtitle {
+  clear: both;
+  float: right;
+  color: #c75700;
+  font-family: HouschkaAltPro-bold, "Helvetica", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 1.3;
+  margin-right: 26px;
+  
+  span {
+    color: #000;
+  }
 }
 
