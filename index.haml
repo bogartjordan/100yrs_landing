@@ -18,22 +18,28 @@
   %link{:href => "css/bootstrap-responsive.css", :rel => "stylesheet"}/
   %link{:href => "assets/css/webfonts.css", :rel => "stylesheet"}/
   %link{:href => "assets/css/100yrs.css", :rel => "stylesheet"}/
+  %link{:href => "assets/css/100yrs-responsive.css", :rel => "stylesheet"}/
   
   %script{:src => "js/bootstrap.js"}
   %script{:src => "js/modernizr-2.6.2-respond-1.1.0.min.js"}
     
 %body
-  .container-fluid.no-padding.position-relative
+  .container-fluid.no-padding.position-relative.overflow-hidden
+    #breakpoints
+  
     #logo
       %img(src="img/logo-100yrs.png")
       
     #logo-bg
       %img(src="img/logo-bg.png")
+      
+    #logo-shape
+      %img(src="img/shape-hexagon.png")
   
     .row-fluid.no-margin
       .row-50.top-left
       
-      .row-50.top-right
+      .row-50.top-right.overflow-hidden
         .text-content
           .text
             A Hundred Years is a purpose-driven creative consultancy dedicated to amplifying the dreams of extraordinary organizations. We design products and experiences that inspire, engage and connect people to what matters most.

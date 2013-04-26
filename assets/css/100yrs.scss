@@ -1,12 +1,27 @@
+body {
+  padding: 0 !important;
+}
 
+#breakpoints {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 5px;
+  background: white;
+}
+
+
+.overflow-hidden {
+  overflow: hidden;
+}
 .position-relative {
   position: relative;
 }
-
 .no-padding {
   padding: 0;
 }
-
 .no-margin {
   margin: 0 auto;
 }
@@ -18,10 +33,10 @@
 
 #logo {
   position: absolute;
-  top: 17px;
+  top: 6px;
   left: 0;
-  width: 100%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 0 0 0 5%;
   z-index: 100;
   
   img {
@@ -48,6 +63,23 @@
   }
 }
 
+#logo-shape {
+  position: absolute;
+  top: 117px;
+  left: 0;
+  width: 83%;
+  margin: 0 0 0 8.5%;
+  opacity: 0.25;
+  z-index: 25;
+  
+  img {
+    display: block;
+    width: 100%;
+    max-width: 765px;
+    margin: 0 auto;
+  }
+}
+
 
 
 .top-left {
@@ -57,6 +89,11 @@
   -o-background-size: cover;
   background-size: cover;
   min-height: 936px;
+  
+  transition: width 1.2s;
+  -moz-transition: width 1.2s;
+  -webkit-transition: width 1.2s;
+  -o-transition: width 1.2s;
 }
 
 .top-right {
@@ -66,6 +103,11 @@
   -o-background-size: cover;
   background-size: cover;
   min-height: 936px;
+  
+  transition: width 1.2s;
+  -moz-transition: width 1.2s;
+  -webkit-transition: width 1.2s;
+  -o-transition: width 1.2s;
 }
 
 .text-content {
@@ -74,8 +116,7 @@
   z-index: 75;
 }
 
-.text,
-.text-title {
+.text {
   clear: both;
   float: left;
   
@@ -85,5 +126,25 @@
   letter-spacing: 2px;
   
   width: 50%;
+  width: 390px;
   margin-left: 26px;
 }
+
+.text-title {
+  clear: both;
+  float: left;
+  
+  color: #fff;
+  font-family: HouschkaAltPro-Bold, "Helvetica", sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  
+  width: 40%;
+  min-width: 211px;
+  
+  padding: 0 0 10px 0;
+  margin-left: 26px;
+  
+  border-bottom: 10px solid #fff;
+}
+
